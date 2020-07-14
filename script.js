@@ -49,7 +49,7 @@ number.forEach((number) => {
   number.addEventListener("click", (event)=>{
     inputNumber(event.target.value);
     updateScreen(currentNumber);
-  })
+  });
 });
 
 const operators = document.querySelectorAll(".operator");
@@ -71,7 +71,7 @@ const operators = document.querySelectorAll(".operator");
 operators.forEach((operator) => {
   operator.addEventListener("click", (event)=>{
     inputOperator(event.target.value);
-  })
+  });
 });
 
 const equalSign=document.querySelector('.equal-sign');
@@ -116,7 +116,7 @@ const clearAll=() =>{
   prevNumber='';
   calculationOperator='';
   currentNumber='0';
-}
+};
 
 const clearBtn=document.querySelector('.all-clear');
 clearBtn.addEventListener('click',() =>{
@@ -133,6 +133,6 @@ decimal.addEventListener('click'(event)=>{
 inputDecimal=(dot) =>{
   if(currentNumber.includes('.')) {
     return;
-  }
+  };
   currentNumber += dot;
-}
+};
